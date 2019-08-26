@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
                             }
                         })
             }
-        }
+        } 
 
 
         /* 사용자가 EditText를 터치하여 키보드가 다른 View를 가려서, 사용자가 불편함을 겪을 수도 있으니,
