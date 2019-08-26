@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:id="@+id/mainLayout"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".Activity.MainActivity">
+
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:textSize="35sp"
+        android:text="탑승한 기차의 정보" />
+
+    <!--<TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv1"
+        android:layout_marginBottom="20dp"
+        android:textSize="20sp"
+        android:text="열차 번호" />
+    <EditText
+        android:id="@+id/trainNo"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv2"
+        android:layout_alignBaseline="@id/tv2"
+        android:textSize="20sp"/>-->
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv1"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="24dp"
+        android:textSize="20sp"
+        android:text="출발역" />
+    <EditText
+        android:id="@+id/departStation"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv3"
+        android:layout_alignBaseline="@id/tv3"
+        android:layout_marginRight="24dp"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv3"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="24dp"
+        android:textSize="20sp"
+        android:text="도착역" />
+    <EditText
+        android:id="@+id/arriveStation"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv4"
+        android:layout_alignBaseline="@id/tv4"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/trainInformSubmit"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/tv4"
+        android:text="확인" />
+
+
+</RelativeLayout>
