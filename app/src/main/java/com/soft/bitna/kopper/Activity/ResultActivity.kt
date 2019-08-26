@@ -50,7 +50,6 @@ class ResultActivity : AppCompatActivity() {
         setContentView(R.layout.result_activity)
 
 
-//범위지정함수로 selectingHocha 묶기
         // Spinner 셋팅
         with(selectingHocha) {
             adapter = hochaSpinnerAdapter
@@ -106,8 +105,7 @@ class ResultActivity : AppCompatActivity() {
                                         Log.d("kopper", "${responseSeatList
                                                 ?: "responseSeatList==null"}")
 
-                                        //101~116 lines, 선택한 호차로 가져온 좌석 정보로 좌석 RecyclerView를 변경
-
+                                        //101~120 lines, 선택한 호차로 가져온 좌석 정보로 좌석 RecyclerView를 변경
                                         if (responseSeatList?.isEmpty()!!) {
                                             it.add(SeatGreedItem(routeList[0], "좌석이 없습니다."))
                                             routeListIdx = 1
@@ -169,7 +167,6 @@ class ResultActivity : AppCompatActivity() {
         //////////////////////////////////////////////////////////////////////////
 
 
-//hochaLinearRecyclerView를 범위지정함수로 묶기
         // 호차 RecyclerView 셋팅
         with(hochaLinearRecyclerView) {
             adapter = hochaLinearAdapter
@@ -180,7 +177,6 @@ class ResultActivity : AppCompatActivity() {
         ///////////////////////////////////////////////////////////////////////////////
 
 
-//익명객체 범위지정함수 적용해볼까? SAM지원되면 함수만 구현해보기
         val gestureDetector = GestureDetector(this@ResultActivity, object : GestureDetector.SimpleOnGestureListener() {
             override fun onSingleTapUp(e: MotionEvent): Boolean {
                 return true
@@ -220,6 +216,5 @@ class ResultActivity : AppCompatActivity() {
         })
 
     }
-
 
 }
