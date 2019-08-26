@@ -36,7 +36,7 @@ class ResultActivity : AppCompatActivity() {
 
     private val seatGridRecyclerView by lazy { findViewById<View>(R.id.seatGridRecyclerview) as RecyclerView }
     private lateinit var seatGridAdapter: SeatRecyclerViewAdapter //onCreate()에서 초기화
-    val seatGridLayoutManager by lazy { GridLayoutManager(applicationContext, 1) } //통신 후 변경하기
+    val seatGridLayoutManager by lazy { GridLayoutManager(applicationContext, 1) }
 
     private val hochaLinearRecyclerView by lazy { findViewById<View>(R.id.hochaRecyclerView) as RecyclerView }
     private val hochaLinearAdapter by lazy { HochaRecyclerViewAdapter(applicationContext, hochaList) }
@@ -77,7 +77,7 @@ class ResultActivity : AppCompatActivity() {
                 Log.d("Kopper", hochaList[position] + " 선택") //hochaList[position]의 형식: n 호차 (n = 정수)
 
                 // 호차 RecyclerView에서 선택되어있던 위치의 아이템에서 네모표시를 없애고,
-                // 새로 선택된 위치의 아이템에 네모표시를 함.
+                // 새로 선택된 위치의 아이템에 네모표시를 합니다.
                 with(hochaLinearRecyclerView) {
                     getChildAt(beforeHochaPosition).setBackgroundColor(Color.rgb(191, 222, 212))
                     getChildAt(position).setBackgroundResource(R.drawable.touch_hocha_border)
