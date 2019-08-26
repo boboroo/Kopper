@@ -56,12 +56,12 @@ class MainActivity : AppCompatActivity() {
                                     Log.d("Kopper", "(searchingTrainInform) Request 성공  !! :")
                                     Log.d("Kopper", "${trainInform?:"trainInform == null"}")
 
-                                    val intent = Intent(applicationContext, ResultActivity::class.java).apply {
+                                    if ((trainInform!!.hochaList != null) and (trainInform!!.routeList != null)) {
+                                        val intent = Intent(applicationContext, ResultActivity::class.java).apply {
                                         putStringArrayListExtra("routeList", trainInform!!.routeList)
                                         putStringArrayListExtra("hochaList", trainInform!!.hochaList)
-                                    }
+                                        }
 
-                                    if ((trainInform!!.hochaList != null) and (trainInform!!.routeList != null)) {
                                         startActivity(intent)
                                     }
                                     else if (trainInform!!.hochaList == null){
