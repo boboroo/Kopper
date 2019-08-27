@@ -15,7 +15,7 @@ import retrofit2.http.POST
 import retrofit2.http.Query
 
 
-class SearchService : APIAdapter() {
+class SearchService{
 
     // SignAPI 인터페이스
     interface searchServiceAPI {
@@ -53,7 +53,7 @@ class SearchService : APIAdapter() {
          */
         fun getRetrofit(context: Context): searchServiceAPI {
             // 현재 서비스객체의 이름으로 Retrofit 객체를 초기화 하고 반환
-            return APIAdapter.Companion.retrofit(context, searchServiceAPI::class.java) as searchServiceAPI
+            return APIAdapter.retrofit(context, searchServiceAPI::class.java) as searchServiceAPI
         }
     }
 }

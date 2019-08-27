@@ -3,6 +3,7 @@ package com.soft.bitna.kopper.ForRecyclerViews
 import android.content.Context
 import android.graphics.Color
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,6 +16,8 @@ import java.util.ArrayList
 class SeatRecyclerViewAdapter(internal var context: Context, internal var list: ArrayList<SeatGreedItem>?) : RecyclerView.Adapter<SeatRecyclerViewAdapter.SeatViewHolder>() {
 
     override fun onBindViewHolder(holder: SeatViewHolder, position: Int) {
+        Log.d("kopper", "onBindViewHolder() 호출")
+
         if (list != null) {
             //경로 아이템 문자형식을 경로A-경로B 로 두면,
             //글자가 애매하게 다음 줄로 넘어가 출력되어, 사용자의 화면으로는 의미의 전달이 단 번에 될 수 없다고 생각했습니다.
@@ -23,9 +26,13 @@ class SeatRecyclerViewAdapter(internal var context: Context, internal var list: 
             //          -
             //        경로B
             //로 변경하였습니다.
-            val routeArr = list!![position].route.split("-".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
-            val route = StringBuffer().append(routeArr[0]).append("\n-\n").append(routeArr[1])
-            holder.routeTv.text = route
+            holder.routeTv.text = StringBuffer().also {
+                val routeArr = list!![position].route.split("-").toTypedArray()
+                it.append(routeArr[0]).append("\n-\n").append(routeArr[1])
+            }
+            /*위와 동일한 코드. 이게 더 빠름.
+            val routeArr = list!![position].route.split("-").toTypedArray()
+            holder.routeTv.text = "${routeArr[0]}\n-\n${routeArr[1]}"*/
 
             holder.seatIdTv.text = list!![position].seat
 
@@ -44,22 +51,12 @@ class SeatRecyclerViewAdapter(internal var context: Context, internal var list: 
     }
 
     override fun getItemCount(): Int {
-        return if (list != null) {
-            list!!.size
-        } else {
-            0
-        }
+        return (list?.size)?:0
     }
 
     inner class SeatViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        internal var routeTv: TextView
-        internal var seatIdTv: TextView
-
-        init {
-
-            routeTv = itemView.findViewById(R.id.routeTv)
-            seatIdTv = itemView.findViewById(R.id.seatIdTv)
-        }
+        val routeTv: TextView = itemView.findViewById(R.id.routeTv)
+        val seatIdTv: TextView = itemView.findViewById(R.id.seatIdTv)
     }
 
 }
