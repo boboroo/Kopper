@@ -36,7 +36,7 @@ class ResultActivity : AppCompatActivity() {
 
     private val seatGridRecyclerView by lazy { findViewById<View>(R.id.seatGridRecyclerview) as RecyclerView }
     private lateinit var seatGridAdapter: SeatRecyclerViewAdapter //onCreate()에서 초기화
-    val seatGridLayoutManager by lazy { GridLayoutManager(applicationContext, 1) } //통신 후 변경하기
+    val seatGridLayoutManager by lazy { GridLayoutManager(applicationContext, 1) }
 
     private val hochaLinearRecyclerView by lazy { findViewById<View>(R.id.hochaRecyclerView) as RecyclerView }
     private val hochaLinearAdapter by lazy { HochaRecyclerViewAdapter(applicationContext, hochaList) }
