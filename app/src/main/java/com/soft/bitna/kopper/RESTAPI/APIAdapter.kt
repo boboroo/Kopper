@@ -34,7 +34,7 @@ class APIAdapter {
             // 5. Retrofit 빌드
             // 주의) addConverterFactory를 추가하지 않을 경우 어플리케이션이 종료됨
             val retrofit = Retrofit.Builder()
-                    .baseUrl("http://10.1.33.115:8080/WebTest/")
+                    .baseUrl("웹서버 url")
                     .addConverterFactory(GsonConverterFactory.create())
                     .client(okHttpClient)
                     .build()
