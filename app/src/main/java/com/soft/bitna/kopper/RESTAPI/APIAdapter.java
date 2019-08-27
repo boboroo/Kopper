@@ -33,7 +33,7 @@ public class APIAdapter {
         // 5. Retrofit 빌드
         // 주의) addConverterFactory를 추가하지 않을 경우 어플리케이션이 종료됨
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://172.30.1.32:8080/WebTest/") // http://172.30.1.32:8080/WebTest/ ~~~ 도서관:http://10.1.33.x:8080/WebTest/
+                .baseUrl("웹서버url")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build();
