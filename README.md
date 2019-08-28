@@ -1,14 +1,15 @@
 # Kopper
 [ Android ] Java에서 Kotlin으로 변환해가는 프로젝트 입니다.
 
+#
 
-*
  현재는 모두 Kotlin으로 변환되어있는 상태입니다.
 
  Java와 Kotlin 두 가지 언어로 작성되어있는 상태를 보시려면 Commit한 기록에서 맨 첫 번째 Commit (Commit메세지: Java와 Kotlin 두 가지 언어로 작성되어있는 상태)을 보시면 됩니다.
 
 
-# Kotlin으로 변환하며 느낀 점:
+
+* Kotlin으로 변환하며 느낀 점:
 
  프로퍼티를 의미와 목적에 따라 가변/불변으로 나눈 후, 그 밑 구현부 코드가 더 처리 흐름에만 집중되고 간결해진 것을 느꼈습니다.
 
@@ -17,7 +18,8 @@
  Kotlin으로 변환하기 전보다는 전체적으로 코드 가독성이 좋아져서 코드의 목적이 더 잘 보이게 되었다는 생각이 들었습니다.
 
 
-# 사용된 버전
+
+* 사용된 버전
 
 gradle버전: 3.2.1
 compileSdkVersion: 27
@@ -26,7 +28,8 @@ targetSdkVersion: 27
 Kotlin버전: 1.2.71
 
 
-# Gradle을 통한 플러그인, 라이브러리 추가
+
+* Gradle을 통한 플러그인, 라이브러리 추가
 
 "프로젝트 루트 폴더의 dependencies.gradle 파일"에
 ext.kotlin_version = '1.2.71' 를 추가하였습니다.
@@ -46,3 +49,5 @@ implementation 'com.squareup.retrofit2:retrofit:2.1.0'
 implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
 implementation 'com.squareup.okhttp3:okhttp:3.0.0-RC1'
 implementation 'com.squareup.okhttp3:logging-interceptor:3.0.0-RC1'
+
+
