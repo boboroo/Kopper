@@ -8,14 +8,12 @@
  Java와 Kotlin 두 가지 언어로 작성되어있는 상태를 보시려면 Commit한 기록에서 맨 첫 번째 Commit (Commit메세지: Java와 Kotlin 두 가지 언어로 작성되어있는 상태)을 보시면 됩니다. <br/>
 <br/>
 <br/>
-<br/>
 ### Kotlin으로 변환하며 느낀 점:
 
  프로퍼티를 의미와 목적에 따라 가변/불변으로 나눈 후, 그 밑 구현부 코드가 더 처리 흐름에만 집중되고 간결해진 것을 느꼈습니다. <br/>
 범위지정함수를 사용하며, 변수가 사용되는 부분이 명확히 구분 지어진게 가장 매력적으로 느껴졌습니다. <br/>
 <br/>
  Kotlin으로 변환하기 전보다는 전체적으로 코드 가독성이 좋아져서 코드의 목적이 더 잘 보이게 되었다는 생각이 들었습니다. <br/>
-<br/>
 <br/>
 <br/>
 ### 사용된 버전
@@ -25,7 +23,6 @@ compileSdkVersion: 27 <br/>
 minSdkVersion: 21 <br/>
 targetSdkVersion: 27 <br/>
 Kotlin버전: 1.2.71 <br/>
-<br/>
 <br/>
 <br/>
 ### Gradle을 통한 플러그인, 라이브러리 추가
@@ -49,6 +46,5 @@ implementation 'com.squareup.retrofit2:retrofit:2.1.0' <br/>
 implementation 'com.squareup.retrofit2:converter-gson:2.1.0' <br/>
 implementation 'com.squareup.okhttp3:okhttp:3.0.0-RC1' <br/>
 implementation 'com.squareup.okhttp3:logging-interceptor:3.0.0-RC1' <br/>
-<br/>
 <br/>
 <br/>
